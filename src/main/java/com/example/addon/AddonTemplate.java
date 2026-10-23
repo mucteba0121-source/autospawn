@@ -1,5 +1,5 @@
 package com.example.addon;
-
+import com.example.addon.modules.AutoSpawn;
 import com.example.addon.commands.CommandExample;
 import com.example.addon.hud.HudExample;
 import com.example.addon.modules.ModuleExample;
@@ -19,7 +19,7 @@ public class AddonTemplate extends MeteorAddon {
     public static final HudGroup HUD_GROUP = new HudGroup("Example");
 
     @Override
-    public void onInitialize() {
+    public void onInitialize() {Modules.get().add(new AutoSpawn());}
         LOG.info("Initializing Meteor Addon Template");
 
         // Modules
